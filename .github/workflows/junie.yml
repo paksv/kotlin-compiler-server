@@ -20,6 +20,6 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: jetbrains-junie/junie-workflows/.github/workflows/ej-issue.yml@devcontainer2
+    uses: jetbrains-junie/junie-workflows/.github/workflows/ej-issue.yml@spak-test
     with:
       workflow_params: ${{ inputs.workflow_params }}
