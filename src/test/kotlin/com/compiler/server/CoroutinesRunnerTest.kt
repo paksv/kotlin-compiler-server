@@ -288,11 +288,10 @@ class CoroutinesRunnerTest : BaseExecutorTest() {
 
 
   @Test
-  fun `base coroutines test `() {
+  fun `flow api basic test`() {
     run(
-      code = "",
-      contains = ""
+      code = "import kotlinx.coroutines.*\nimport kotlinx.coroutines.flow.*\n\nfun main() = runBlocking {\n    // Create a flow of integers from 1 to 3\n    val flow = flow {\n        for (i in 1..3) {\n            delay(100) // Pretend we're doing something useful\n            emit(i) // Emit the next value\n        }\n    }\n    \n    // Collect the flow\n    flow.collect { value ->\n        println(\"Received: \$value\")\n    }\n}",
+      contains = "Received: 1\nReceived: 2\nReceived: 3\n"
     )
   }
-
 }
