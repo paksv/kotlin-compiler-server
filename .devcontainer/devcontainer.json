@@ -12,7 +12,5 @@
 //      "installGradle": "true",
 //      "installMaven": "true"
     }
-  },
-
-  "postCreateCommand": "./gradlew build",
+  }
 }
